@@ -75,7 +75,7 @@ end
 
 def command_fleet(cars)
   cars.each_with_index do |car, i|
-    action = act car
+    action = act(car)
     puts "Car #{i + 1}: #{action}"
   end
   puts '---'
@@ -84,7 +84,7 @@ end
 def add_one_car_per_day(cars, num_days)
   num_days.times do
     new_car = get_new_car
-    puts add_car cars, new_car
+    puts add_car(cars, new_car)
     command_fleet cars
   end
 end
